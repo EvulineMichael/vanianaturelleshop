@@ -573,7 +573,12 @@ section:first-of-type {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-
+@media screen and (min-width: 768px) {
+  .testimonial-pair video {
+    max-width: 400px;
+    height: 600px;
+  }
+}
 
 
 .testimonial-video video {
