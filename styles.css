@@ -1,10 +1,14 @@
-body {
+html, body {
     font-family: 'Nunito Sans', sans-serif;
     line-height: 1.6;
     color: #333;
     margin: 0;
     padding: 0;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
 }
+
+
 /* Ensure all sections are responsive */
 section {
     width: 100%; /* Full width of the container */
@@ -65,7 +69,7 @@ section:first-of-type {
     font-size: 18px;
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: 700;
     font-style: normal;
     color: #fff;
     display: none; /* Hide brand on mobile */
@@ -282,27 +286,6 @@ section:first-of-type {
 }
 
 
-
-/* WhatsApp floating button */
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-.whatsapp-float img {
-    width: 60px;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-}
-
-.whatsapp-float img:hover {
-    transform: scale(1.1);
-}
-
 /* Apply scroll-margin-top to the sections that correspond to nav items */
 
 #miira-highlight-section{
@@ -513,8 +496,9 @@ section:first-of-type {
 
 .miira-highlight h2 {
   color: #FF0000;
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 25px;
+  font-weight: 700;
 }
 
 .miira-highlight .miira-image {
@@ -549,11 +533,17 @@ section:first-of-type {
   text-align: center;
 }
 
-.section-title {
-  font-size: 2rem;
+.testimonials-section h2 {
+    font-weight: 700 !important;
+}
+
+.testimonials-section h2, h3{
+    font-size: 2rem;
   color: #FF0000;
   margin-bottom: 10px;
+  font-weight: normal;
 }
+
 
 .section-subtitle {
   font-size: 1.2rem;
@@ -562,6 +552,11 @@ section:first-of-type {
 }
 
 /* Video Pair */
+.testimonials-section {
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
 .testimonial-pair {
   display: flex;
   flex-wrap: wrap;
@@ -571,12 +566,14 @@ section:first-of-type {
 }
 
 .testimonial-pair video {
-  max-width: 400px;
-  height: 700px; /* Adjust height as desired */
-  object-fit: cover; /* Keeps the video cropped neatly */
+  flex: 1 1 300px; /* Responsive sizing */
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
 
 
 .testimonial-video video {
@@ -876,11 +873,43 @@ section:first-of-type {
   color: #444;
 }
 
-.whatsapp-contact {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 16px;
+.whatsapp-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25D366;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin: 30px auto;
+  max-width: 350px;
+  transition: background-color 0.3s ease;
 }
+
+.whatsapp-bar:hover {
+  background-color: #1ebe5d;
+}
+
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+
+  .whatsapp-contact {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #222;
+  font-weight: bold;
+}
+
 
 .whatsapp-link {
   color: #25d366;
