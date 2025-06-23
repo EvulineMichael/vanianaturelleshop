@@ -104,6 +104,26 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+// JS for order form product packages
+
+  // Clear package field on load
+  document.addEventListener("DOMContentLoaded", function () {
+    const selectField = document.getElementById("product-package");
+    if (window.location.hash !== "#order-form") {
+      selectField.value = "";
+    }
+
+    // Listen for clicks on any package button
+    document.querySelectorAll(".select-package-btn").forEach(btn => {
+      btn.addEventListener("click", function () {
+        const selectedPackage = this.getAttribute("data-package");
+        setTimeout(() => {
+          selectField.value = selectedPackage;
+        }, 100); // allow scroll to finish
+      });
+    });
+  });
+
 
 
      document.querySelectorAll('.accordion-button').forEach(button => {

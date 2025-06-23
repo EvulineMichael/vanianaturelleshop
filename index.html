@@ -153,13 +153,17 @@
     <a href="#product-packages" class="cta-button">Order Now</a>
   </div>
 
-  <h3 class="section-title">How Can One Natural Product Offer So Many Benefits?</h3>
-  <p class="benefits-explanation">
-  The answer lies in the more than 13 powerful, all-natural ingredients it contains.<br><br>
-  These nutrient-rich ingredients provide your body with essential nutrients it needs to heal itself naturally and give you the relief you deserve.<br><br>
-  Your body is made up of billions of tiny cells, and when they are well-nourished, your whole body feels better.<br><br>
-  Our high-impact, cell-nourishing blend is the perfect companion to support your wellness goals, delivering the vital nutrients your cells need. When your cells get what they need, every part of your body benefits.
-</p>
+<h3 class="section-title">How Can One Natural Product Offer So Many Benefits?</h3>
+<div class="benefits-explanation">
+  <p>The answer lies in the more than 13 powerful, all-natural ingredients it contains.</p>
+  <p>These nutrient-rich ingredients provide your body with essential nutrients it needs to heal itself naturally and give you the relief you deserve.</p>
+  <p>Your body is made up of billions of tiny cells, and when they are well-nourished, your whole body feels better.</p>
+  <p>Our high-impact, cell-nourishing blend is the perfect companion to support your wellness goals, delivering the vital nutrients your cells need. When your cells get what they need, every part of your body benefits.</p>
+
+  <video src="https://res.cloudinary.com/dv4ejn3qv/video/upload/v1750686054/Vania_naturelle_website-product_description_letkte.mp4" controls></video>
+</div>
+
+
 
 
   <div class="testimonial-image">
@@ -210,21 +214,27 @@
     <div class="package-card">
       <h3>BASIC PACKAGE + FREE DELIVERY</h3>
       <img src="https://res.cloudinary.com/dv4ejn3qv/image/upload/v1750415812/Vania_naturelle_website-product_package_1_mndnrm.jpg" alt="Basic package">
-        <a href="#order-form" class="select-package-btn">I want this package</a>
+        <a href="#order-form" class="select-package-btn" data-package="Basic Package">I want this package</a>
     </div>
 
     <!-- STANDARD PACKAGE -->
     <div class="package-card">
       <h3>STANDARD PACKAGE + FREE DELIVERY</h3>
       <img src="https://res.cloudinary.com/dv4ejn3qv/image/upload/v1750415813/Vania_naturelle_website-product_package_2_zhtr1v.jpg" alt="Standard package">
-       <a href="#order-form" class="select-package-btn">I want this package</a>
+        <a href="#order-form" class="select-package-btn" data-package="Standard Package">I want this package</a>
     </div>
 
     <!-- PREMIUM PACKAGE -->
     <div class="package-card">
       <h3>PREMIUM PACKAGE + FREE DELIVERY</h3>
       <img src="https://res.cloudinary.com/dv4ejn3qv/image/upload/v1750415833/Vania_naturelle_website-product_package_3_itxoks.jpg" alt="Premium package">
-        <a href="#order-form" class="select-package-btn">I want this package</a>
+        <a href="#order-form" class="select-package-btn" data-package="Premium Package">I want this package</a>
+    </div>
+     <!-- PLATINUM PACKAGE -->
+    <div class="package-card">
+      <h3>PLATINUM PACKAGE + FREE DELIVERY</h3>
+      <img src="https://res.cloudinary.com/dv4ejn3qv/image/upload/v1750684019/Vania_naturelle_website-product_package_4_h185b7.jpg" alt="Platinum package">
+        <a href="#order-form" class="select-package-btn" data-package="Platinum Package">I want this package</a>
     </div>
   </div>
 </section>
@@ -251,6 +261,16 @@
 
     <label for="state">STATE:</label>
     <input type="text" id="state" name="state" required>
+
+    <label for="product-package">PRODUCT PACKAGE:</label>
+<select id="product-package" name="product-package" required>
+  <option value="">-- Select a Package --</option>
+  <option value="Basic Package">Basic Package(1 packet)- ₦60,000 </option>
+  <option value="Standard Package">Standard Package(2 packets)- ₦115,000</option>
+  <option value="Premium Package">Premium Package(3 packets)- ₦175,000</option>
+  <option value="Platinum Package">Platinum Package(4 packets)- ₦230,000</option>
+</select>
+
 
     <button type="submit">SUBMIT ORDER FORM</button>
   </form>

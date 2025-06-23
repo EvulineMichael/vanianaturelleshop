@@ -643,6 +643,20 @@ section:first-of-type {
   border-radius: 4px;
 }
 
+.benefits-explanation video {
+   width: 100%;
+  max-width: 400px;
+  margin: 30px auto;
+  display: block;
+  height: auto;
+  display: block;
+  margin: 20px auto 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
 .testimonial-image img {
   max-width: 600px;
   width: 100%;
@@ -753,6 +767,20 @@ section:first-of-type {
 
 .package-grid {
   display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Force 4 columns on desktop */
+  gap: 30px;
+  justify-items: center;
+}
+
+@media (max-width: 1024px) {
+  .package-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .package-grid {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   justify-items: center;
@@ -768,6 +796,9 @@ section:first-of-type {
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: transform 0.3s ease;
 }
+  }
+
+
 
 .package-card:hover {
   transform: translateY(-5px);
@@ -854,6 +885,18 @@ section:first-of-type {
 .order-form-section textarea {
   resize: vertical;
 }
+
+.order-form-section select {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  appearance: none; /* optional: remove default arrow styling on some browsers */
+}
+
 
 .order-form-section button {
   background-color: #c0392b;
